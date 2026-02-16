@@ -3,36 +3,33 @@ cask "hyper-doctor" do
   name "hyper-doctor"
   desc "CLI tool for managing local development environments with Firebase emulators and multi-service orchestration"
   homepage "https://github.com/hyperfluid-solutions/hyper-doctor"
-  version "0.1.5"
+  version "0.1.6"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
   binary "hdr"
-  depends_on formula: [
-      "f1bonacc1/tap/process-compose",
-    ]
 
   on_macos do
     on_intel do
       url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_darwin_amd64.tar.gz"
-      sha256 "50d8979dac0a1ac2888a6986f6eb606a26011185f6ae7b800acd7a450d12bc47"
+      sha256 "5d85bd493554cc56d7aa9871211bdd29ea73d1e61b5b7570296ee3c03e5ca43e"
     end
     on_arm do
       url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_darwin_arm64.tar.gz"
-      sha256 "8e8e99d7e487d0945582c48c45c3897bb98c4c2a0ba634e0ce959fe05ce6860c"
+      sha256 "5c9b6fa8510ceb86a7ab715cf3adc5a7555f72d3734c2c0a9ddf614906f25d42"
     end
   end
 
   on_linux do
     on_intel do
       url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_linux_amd64.tar.gz"
-      sha256 "036a2918e0b9954154a665bb1ff4c1979f07856c6144474dbfac647cddc30ba3"
+      sha256 "a959c87831dc88a8a0fa1f10a72b4e76281344a1f7b4a89a7bd5d15f64c9482b"
     end
     on_arm do
       url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_linux_arm64.tar.gz"
-      sha256 "4a469032b49917cc85a2ce2bed50eeee9f4293148680e4af30d2fea178afa98b"
+      sha256 "32b94430d279b7e2bd356d6af17a88b97d2126ef38b2d4f6e0a72fe28e31b058"
     end
   end
 
@@ -41,9 +38,13 @@ cask "hyper-doctor" do
     ""
     "The CLI binary is named 'hdr' (short for hyper-doctor)."
     ""
+    "REQUIRED: process-compose must be installed for service orchestration:"
+    "  brew install f1bonacc1/tap/process-compose"
+    ""
     "Quick start:"
-    "  1. Create a hyper-doctor.yaml in your project directory"
-    "  2. Run: hdr dev up"
+    "  1. Install process-compose (see above)"
+    "  2. Create a hyper-doctor.yaml in your project directory"
+    "  3. Run: hdr dev up"
     ""
     "For more information, see:"
     "  https://github.com/hyperfluid-solutions/hyper-doctor"

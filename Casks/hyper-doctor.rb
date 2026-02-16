@@ -3,7 +3,7 @@ cask "hyper-doctor" do
   name "hyper-doctor"
   desc "CLI tool for managing local development environments with Firebase emulators and multi-service orchestration"
   homepage "https://github.com/hyperfluid-solutions/hyper-doctor"
-  version "0.1.2"
+  version "0.1.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,23 +16,23 @@ cask "hyper-doctor" do
 
   on_macos do
     on_intel do
-      url "https://github.com/hyperfluid-solutions/hyper-doctor/releases/download/v#{version}/hyper-doctor_#{version}_darwin_amd64.tar.gz"
-      sha256 "7bccc1fd873100e18738b22ef2676e93f02a2d16cd88fea3fb62edd08cc5af54"
+      url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_darwin_amd64.tar.gz"
+      sha256 "013b3697cd9c4aff6def64eb4bc782a160cce6bb49e7aa1dccc8c17e29b9f0cb"
     end
     on_arm do
-      url "https://github.com/hyperfluid-solutions/hyper-doctor/releases/download/v#{version}/hyper-doctor_#{version}_darwin_arm64.tar.gz"
-      sha256 "ae5c22ab0ace5c1f2a941d0f68f262cd495606eaaf97087ce1ce0edd0d9b030e"
+      url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_darwin_arm64.tar.gz"
+      sha256 "10668dbd82f842e9047f41c215a5740a7341382ac3731a0cd3a3f94eea7e4759"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/hyperfluid-solutions/hyper-doctor/releases/download/v#{version}/hyper-doctor_#{version}_linux_amd64.tar.gz"
-      sha256 "a288864ef8e31c60016d49762c6c1be8034f27848477fc12042d702981354dfb"
+      url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_linux_amd64.tar.gz"
+      sha256 "1ee4903f7da147450ac0010f5793fcbc50021f4806048a4b1521d80589dde207"
     end
     on_arm do
-      url "https://github.com/hyperfluid-solutions/hyper-doctor/releases/download/v#{version}/hyper-doctor_#{version}_linux_arm64.tar.gz"
-      sha256 "3d6fa2752a6c8f80b739a346ee72c5a5eff5ade2bd6817bfb1c6b592b9d41a16"
+      url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_linux_arm64.tar.gz"
+      sha256 "8f963c8cd6b635ac482df6e829edea00c98905ae92e071cc01b0c8237fbfab3b"
     end
   end
 

@@ -3,7 +3,7 @@ cask "hyper-doctor" do
   name "hyper-doctor"
   desc "CLI tool for managing local development environments with Firebase emulators and multi-service orchestration"
   homepage "https://github.com/hyperfluid-solutions/hyper-doctor"
-  version "0.1.4"
+  version "0.1.5"
 
   livecheck do
     skip "Auto-generated on release."
@@ -11,28 +11,28 @@ cask "hyper-doctor" do
 
   binary "hdr"
   depends_on formula: [
-      "process-compose",
+      "f1bonacc1/tap/process-compose",
     ]
 
   on_macos do
     on_intel do
       url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_darwin_amd64.tar.gz"
-      sha256 "013b3697cd9c4aff6def64eb4bc782a160cce6bb49e7aa1dccc8c17e29b9f0cb"
+      sha256 "50d8979dac0a1ac2888a6986f6eb606a26011185f6ae7b800acd7a450d12bc47"
     end
     on_arm do
       url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_darwin_arm64.tar.gz"
-      sha256 "10668dbd82f842e9047f41c215a5740a7341382ac3731a0cd3a3f94eea7e4759"
+      sha256 "8e8e99d7e487d0945582c48c45c3897bb98c4c2a0ba634e0ce959fe05ce6860c"
     end
   end
 
   on_linux do
     on_intel do
       url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_linux_amd64.tar.gz"
-      sha256 "1ee4903f7da147450ac0010f5793fcbc50021f4806048a4b1521d80589dde207"
+      sha256 "036a2918e0b9954154a665bb1ff4c1979f07856c6144474dbfac647cddc30ba3"
     end
     on_arm do
       url "https://storage.googleapis.com/hyper-doctor-releases/hyper-doctor/#{version}/hyper-doctor_#{version}_linux_arm64.tar.gz"
-      sha256 "8f963c8cd6b635ac482df6e829edea00c98905ae92e071cc01b0c8237fbfab3b"
+      sha256 "4a469032b49917cc85a2ce2bed50eeee9f4293148680e4af30d2fea178afa98b"
     end
   end
 
